@@ -36,7 +36,7 @@
 			'WP Professionalize Settings Page',
 			'WP Professionalize',
 			'manage_options',
-			'wp-professionalize'
+			'wp-professionalize',
 			'wp_professionalize_options_page'
 			);
 
