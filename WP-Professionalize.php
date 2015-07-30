@@ -26,17 +26,34 @@
 	along with WP Professionalize. If not, see https://www.gnu.org/licenses/gpl-2.0.html
 	*/
 
-	add_filter('gettext', 'change_howdy', 10, 3);
+	/*
+	Create settings page in Admin menu under Settings
+	*/
 
-	function change_howdy($translated, $text, $domain) {
+	function wp_professionalize_menu() {
 
-	    if (!is_admin() || 'default' != $domain)
-	        return $translated;
+		add_options_page(
+			'WP Professionalize Settings Page',
+			'WP Professionalize',
+			'manage_options',
+			'wp-professionalize'
+			'wp_professionalize_options_page'
+			);
 
-	    if (false !== strpos($translated, 'Howdy'))
-	        return str_replace('Howdy', 'Welcome', $translated);
-
-	    return $translated;
 	}
 
+	add_action( 'admin_menu', 'wp_professionalize_menu' );
+
+
+	function wp_professionalize_options_page() {
+
+		if( !current_user_can( 'manage_options' )) {
+
+			wp_die( 'You do not have sufficient permissions to access this page' );
+
+		}
+
+		echo '<p>Welcome to our plugin page!</p>';
+
+	};
 ?>
