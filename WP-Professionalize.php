@@ -27,6 +27,12 @@
 	*/
 
 	/*
+	Create Global Variables
+	*/
+
+	$options = array();
+
+	/*
 	Create settings page in Admin menu under Settings
 	*/
 
@@ -53,7 +59,36 @@
 
 		}
 
-		echo '<p>Welcome to our plugin page!</p>';
+		global $options;
+
+		/*if( isset( $_POST['wp_professionalize_settings_form_submitted'] ) ) {
+
+			$hidden_field = esc_html( $_POST['wp_professionalize_settings_form_submitted'] );
+
+			if( $hidden_field == 'Y' ) {
+
+				
+				
+			}
+
+		}*/
+
+		require ( 'inc/options-page-wrapper.php' );
 
 	};
+
+	add_filter('gettext', 'remove_howdy', 10, 3);
+
+	function remove_howdy($translated, $text, $domain) {
+
+	    if (!is_admin() || 'default' != $domain)
+	        return $translated;
+
+	    if (false !== strpos($translated, 'Howdy'))
+	        return str_replace('Howdy,', '', $translated);
+
+	    return $translated;
+	}
+
+
 ?>
