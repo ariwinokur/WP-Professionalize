@@ -1,5 +1,11 @@
 <h1><?php _e( 'WP Professionalize', 'wp_admin_style' ); ?></h1>
 
+
+
+wp_enqueue_scripts( 'HowdyText', 'js/HowdyText.js');
+
+
+
 <div class="wrap">
 
 	<div id="icon-options-general" class="icon32"></div>
@@ -20,32 +26,44 @@
 
 						<div class="inside">
 							
-							<form>
+							<form name="wp_professionalize_settings_form" method="post" action="">
+							<input type="hidden" name="wp_professionalize_settings_form_submitted" value="Y"
 							<table class="form-table">
-								/*
-								Remove or Replace Howdy
-								Need to add option to revert to default
-								*/
-								<fieldset><tr valign="top">
-										<td scope="row"><label for="tablecell">
-											<legend class="screen-reader-text"><span>Remove or Replace Howdy</span></legend>
-											<label title='g:i a'>
-												<input type="radio" name="howdy" value="remove" />
-												<span><?php esc_attr_e( 'Remove Howdy', 'wp_admin_style' ); ?></span>
-											</label>
-										</label></td>
-										<td>
-											<label title='g:i a'>
-											<input type="radio" name="howdy" value="replace" />
-											<span><?php esc_attr_e( 'Replace Howdy', 'wp_admin_style' ); ?></span>
-										</label></td>
-								</tr>
+
+								<!-- Remove or Replace Howdy
+								Need to add option to revert to default -->
+
+								<formgroup>
+								<fieldset>
 								<tr valign="top">
-									<td scope="row"><label for="tablecell">
-										<?php esc_attr_e( 'Replace Howdy with:', 'wp_admin_style' ); ?></span>
-									</label></td>
-									<td><input type="text" value="Welcome" class="regular-text" /><br></td>
-								</tr></fieldset>
+									<td scope="row">
+										<legend class="screen-reader-text">
+											<span>Remove or Replace Howdy</span>
+										</legend>
+										<label title='g:i a'>
+											<input type="radio" name="howdy" value="remove" />
+											<span><?php esc_attr_e( 'Remove Howdy', 'wp_admin_style' ); ?></span>
+										</label>
+									</td>
+									<td>
+										<label title='g:i a'>
+										<input type="radio" name="howdy" value="replace" />
+										<span><?php esc_attr_e( 'Replace Howdy', 'wp_admin_style' ); ?></span>
+										</label>
+									</td>
+								</tr>
+								<span id="replaceWithWrap">
+								<tr valign="top">
+									<td scope="row">
+										<label for="replace">
+										<span><?php esc_attr_e( 'Replace Howdy with:', 'wp_admin_style' ); ?></span>
+									</label>
+									</td>
+									<td><input type="text" value="Welcome" id="replaceHowdy" class="regular-text" /><br></td>
+								</tr>
+								</span>
+								</fieldset>
+								</formgroup>
 							</table>
 							</form>
 
@@ -69,12 +87,12 @@
 								
 							<legend class="screen-reader-text"><span></span></legend>
 							<label for="incoming_links">
-								<input name="" type="checkbox" id="users_can_register" value="1" />
+								<input name="" type="checkbox" id="users_can_register" value="1" checked/>
 								<span><?php esc_attr_e( 'Incoming Links', 'wp_admin_style' ); ?></span>
 							</label>
 
 							<label for="plugins">
-								<input name="" type="checkbox" id="users_can_register" value="2" />
+								<input name="" type="checkbox" id="users_can_register" value="2" checked/>
 								<span><?php esc_attr_e( 'Plugins', 'wp_admin_style' ); ?></span>
 							</label>
 <p>
