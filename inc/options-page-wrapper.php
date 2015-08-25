@@ -1,9 +1,8 @@
 <h1><?php _e( 'WP Professionalize', 'wp_admin_style' ); ?></h1>
 
 
-
-wp_enqueue_scripts( 'HowdyText', 'js/HowdyText.js');
-
+<?php wp_register_script( 'HowdyText', 'js/HowdyText.js'); ?>
+<?php wp_enqueue_script( 'HowdyText', 'js/HowdyText.js'); ?>
 
 
 <div class="wrap">
