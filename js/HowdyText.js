@@ -1,9 +1,9 @@
-$('span[id^="replaceWithWrap"]').hide();
+jQuery('span[id^="replaceWithWrap"]').hide();
 
-$("input[type='radio']").on( "click", function() {
-  if($("input[value='replace']").is(':checked')) {
-	  $('span[id^="replaceWithWrap"]').show();
+jQuery("input[type='radio']").on( "click", function() {
+  if(jQuery("input[value='replace']").is(':checked')) {
+	  jQuery('span[id^="replaceWithWrap"]').show();
   } else {
-	  $('span[id^="replaceWithWrap"]').hide();
+	  jQuery('span[id^="replaceWithWrap"]').hide();
   }
 });
