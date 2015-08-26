@@ -61,7 +61,6 @@
 								</fieldset>
 								</formgroup>
 							</table>
-							</form>
 
 						</div>
 						<!-- .inside -->
@@ -79,7 +78,7 @@
 
 						<div class="inside">
 							
-							<fieldset><tr>
+							<formgroup><fieldset><tr>
 								
 							<legend class="screen-reader-text"><span></span></legend>
 							<label for="incoming_links">
@@ -127,7 +126,7 @@
 								<span><?php esc_attr_e( 'Activity', 'wp_admin_style' ); ?></span>
 							</label>
 
-							</tr></fieldset>
+							</tr></fieldset></formgroup>
 
 						</div>
 						<!-- .inside -->
@@ -139,7 +138,9 @@
 			<!-- post-body-content -->
 
 						<br>
-						<p><input class="button-primary" type="submit" name="Save" value="<?php esc_attr_e( 'Save' ); ?>" /></p>
+						<p><input class="button-primary" type="submit" name="wp_professionalize_settings_form_submit" value="<?php esc_attr_e( 'Save' ); ?>" /></p>
+
+						</form>
 
 			<!-- sidebar -->
 			<div id="postbox-container-1" class="postbox-container">
