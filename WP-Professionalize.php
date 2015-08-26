@@ -32,6 +32,13 @@
 
 	$options = array();
 
+	function wp_professionalize_enqueue_scripts() {
+
+		wp_enqueue_script( 'HowdyText', plugin_dir_url( __FILE__ ) . 'js/HowdyText.js');
+
+	}
+
+
 	/*
 	Create settings page in Admin menu under Settings
 	*/
@@ -49,7 +56,7 @@
 	}
 
 	add_action( 'admin_menu', 'wp_professionalize_menu' );
-
+	add_action( 'admin_head', 'wp_professionalize_enqueue_scripts' );
 
 	function wp_professionalize_options_page() {
 
