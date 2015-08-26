@@ -93,37 +93,37 @@
 							</label>
 <p>
 							<label for="primary">
-								<input name="" type="checkbox" id="users_can_register" value="3" />
+								<input name="" type="checkbox" id="users_can_register" value="3" checked/>
 								<span><?php esc_attr_e( 'Primary', 'wp_admin_style' ); ?></span>
 							</label>
 
 							<label for="secondary">
-								<input name="" type="checkbox" id="users_can_register" value="4" />
+								<input name="" type="checkbox" id="users_can_register" value="4" checked/>
 								<span><?php esc_attr_e( 'Secondary', 'wp_admin_style' ); ?></span>
 							</label>
 <p>
 							<label for="quick_press">
-								<input name="" type="checkbox" id="users_can_register" value="5" />
+								<input name="" type="checkbox" id="users_can_register" value="5" checked/>
 								<span><?php esc_attr_e( 'Quick Press', 'wp_admin_style' ); ?></span>
 							</label>
 
 							<label for="recent_drafts">
-								<input name="" type="checkbox" id="users_can_register" value="6" />
+								<input name="" type="checkbox" id="users_can_register" value="6" checked/>
 								<span><?php esc_attr_e( 'Recent Drafts', 'wp_admin_style' ); ?></span>
 							</label>
 <p>
 							<label for="recent_comments">
-								<input name="" type="checkbox" id="users_can_register" value="7" />
+								<input name="" type="checkbox" id="users_can_register" value="7" checked/>
 								<span><?php esc_attr_e( 'Recent Comments', 'wp_admin_style' ); ?></span>
 							</label>
 
 							<label for="right now">
-								<input name="" type="checkbox" id="users_can_register" value="8" />
+								<input name="" type="checkbox" id="users_can_register" value="8" checked/>
 								<span><?php esc_attr_e( 'Right Now', 'wp_admin_style' ); ?></span>
 							</label>
 <p>
 							<label for="activity">
-								<input name="" type="checkbox" id="users_can_register" value="9" />
+								<input name="" type="checkbox" id="users_can_register" value="9" checked/>
 								<span><?php esc_attr_e( 'Activity', 'wp_admin_style' ); ?></span>
 							</label>
 
