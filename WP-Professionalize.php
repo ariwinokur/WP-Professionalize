@@ -68,17 +68,17 @@
 
 		global $options;
 
-		/*if( isset( $_POST['wp_professionalize_settings_form_submitted'] ) ) {
+		if( isset( $_POST['wp_professionalize_settings_form_submitted'] ) ) {
 
 			$hidden_field = esc_html( $_POST['wp_professionalize_settings_form_submitted'] );
 
 			if( $hidden_field == 'Y' ) {
 
-				
+				esc_attr_e( 'Form Submitted', 'wp_admin_style' );
 				
 			}
 
-		}*/
+		}
 
 		require ( 'inc/options-page-wrapper.php' );
 
