@@ -32,17 +32,17 @@
 								<formgroup>
 								<fieldset>
 								<tr valign="top">
-									<td scope="row">
+									<td scope="row" style="text-align:center">
 										<legend class="screen-reader-text">
 											<span>Remove or Replace Howdy</span>
 										</legend>
-										<label title='g:i a'>
+										<label title='Remove Howdy from Admin Bar'>
 											<input type="radio" name="howdy" value="remove" />
 											<span><?php esc_attr_e( 'Remove Howdy', 'wp_admin_style' ); ?></span>
 										</label>
 									</td>
-									<td>
-										<label title='g:i a'>
+									<td style="text-align:center">
+										<label title='Replace Howdy in the Admin Bar with something else'>
 										<input type="radio" name="howdy" value="replace" />
 										<span><?php esc_attr_e( 'Replace Howdy', 'wp_admin_style' ); ?></span>
 										</label>
@@ -51,11 +51,11 @@
 								<span id="replaceWithWrap">
 								<tr valign="top">
 									<td scope="row">
-										<label for="replace">
+										<label for="replaceWith">
 										<span><?php esc_attr_e( 'Replace Howdy with:', 'wp_admin_style' ); ?></span>
 									</label>
 									</td>
-									<td><input type="text" value="Welcome" id="replaceHowdy" class="regular-text" /><br></td>
+									<td><input type="text" value="Welcome" id="replaceWith" class="regular-text" name="replaceWith" /><br></td>
 								</tr>
 								</span>
 								</fieldset>

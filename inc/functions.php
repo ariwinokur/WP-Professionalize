@@ -30,6 +30,8 @@ function remove_howdy($translated, $text, $domain) {
     return $translated;
 }
 
+
+
 /* Default Dashboard Widgets */
 
 // Main column (left):

@@ -66,36 +66,59 @@
 
 		}
 
+		//require ( 'inc/functions.php' );
+
 		global $options;
 
 		if( isset( $_POST['wp_professionalize_settings_form_submitted'] ) ) {
 
 			$hidden_field = esc_html( $_POST['wp_professionalize_settings_form_submitted'] );
 
+			$replace_howdy_with = esc_html( $_POST['replaceWith'] );
+
+			$howdy = esc_html( $_POST['howdy'] );
+
 			if( $hidden_field == 'Y' ) {
 
 				esc_attr_e( 'Form Submitted', 'wp_admin_style' );
+
+				esc_attr_e( $replace_howdy_with, 'wp_admin_style' );
+
+				esc_attr_e( $howdy, 'wp_admin_style' );
+
+				if ($howdy == 'replace') {
+
+					$options['replace_howdy_with']	=	$replace_howdy_with;
+
+				} elseif:
+
+
+
+				$options['howdy']	=	$howdy;
+
+				update_option( 'wp_professionalize', $options );
+
+
+
+
+
+
+
+
+
+
+
+				}
+
 				
 			}
 
 		}
 
 		require ( 'inc/options-page-wrapper.php' );
-
 	};
 
-	add_filter('gettext', 'remove_howdy', 10, 3);
 
-	function remove_howdy($translated, $text, $domain) {
-
-	    if (!is_admin() || 'default' != $domain)
-	        return $translated;
-
-	    if (false !== strpos($translated, 'Howdy'))
-	        return str_replace('Howdy,', '', $translated);
-
-	    return $translated;
-	}
 
 
 ?>
